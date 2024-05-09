@@ -1,0 +1,70 @@
+### Login Request
+# @name login
+POST {{host}}/Auth_V2/UserLogin
+Content-Type: application/json
+Accept: application/json
+
+## Request Body
+{
+  "UserName": "{{UserName}}",
+  "Password": "{{EncryptedPassword}}",
+  "RequestFrom":"{{RequestFrom}}"
+}
+
+### Set Token
+@token = {{login.response.headers.Token}}
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+### Get Loan List
+# @name getLoanList
+POST {{host}}/Loans_V1/getLoanList
+Content-Type: application/json
+Accept: application/json
+Token: {{token}}
+
+## Request Body
+# {
+#   "RolePermissionId": "1,2,3",
+#   "UserId": "{{ByUserId}}",
+#   "UserName": "{{UserName}}",
+#   "UID": "{{ByUserId}}",
+#   "ByUserId": "{{ByUserId}}",
+#   "PersonId": "{{PersonId}}",
+#   "EmployeeCode": "{{EmployeeCode}}",
+#   "MobileNumber": "{{MobileNumber}}",
+#   "MobileNo": "{{MobileNumber}}",
+#   "RequestFrom":"{{RequestFrom}}"
+# }
+{"UserName":"crystal.cruze@cccul.com","UID":14,"ByUserId":14,"UserId":14,"PersonId":20528,"EmployeeCode":"1224","MobileNumber":"+880-1683670118","MobileNo":"+880-1683670118","RequestFrom":"LIR","RolePermissionId":"1,6"}
+
+### Response
+# {
+#   "Data": [
+#   {
+#     "ApplicationId": 106656,
+#     "LoanProductCode": "20 ",
+#     "LoanProductName": "Loan against M.S.P",
+#     "AppliedLoanAmount": 1000,
+#     "PurposeOfLoan": "UNKNOWN",
+#     "InterestRate": 11,
+#     "TotalInstallment": 12,
+#     "LoanApplicationDate": "2024-02-20T00:00:00",
+#     "LoanStatus": "",
+#     "PresentAddress": " GP,GHA-193/2, MONIPURI PARA, 1215, TEJGAON, DHAKA",
+#     "ParmanentAddress": " BELPUKUR, BELBARI, 5200, DINAJPUR SADAR, DINAJPUR",
+#     "LoanNumber": "D20240220106656",
+#     "ProductTypeId": 2,
+#     "CurrentStageName": "Sent for Investigation",
+#     "BranchName": "Head Office",
+#     "FullName": "BAPPY BESRA",
+#     "PersonId": 64025,
+#     "EntryBranchName": "Head Office",
+#     "BranchCode": "01"
+#   }
+#   ],
+#   "Status": "success",
+#   "Message": null
+# }
+
+

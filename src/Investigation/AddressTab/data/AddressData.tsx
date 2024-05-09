@@ -1,0 +1,38 @@
+export const obj = [
+  {
+    value: "3, East Rajabazar, Tejgaon ,Tejgaon, Dhaka-1215",
+    title: "Present address",
+    firstRow: true,
+    isCorrect: false,
+    // AccountNumber: "hello",
+    // name: "tanmoy hagidok",
+    // Designation: "fff",
+    // Phone: "1234354",
+  },
+  {
+    value: "3, East Rajabazar, Tejgaon ,Tejgaon, Dhaka-1215",
+    title: "Permanent address",
+    firstRow: false,
+    isCorrect: false,
+    // AccountNumber: "t-12356",
+    // name: "James gomes",
+    // Designation: "Consultant",
+    // Phone: "8801936548215",
+  },
+  {
+    value: "173/1/A East Tejturi Bazar",
+    title: "Work address",
+    firstRow: false,
+    isCorrect: true,
+  },
+  {
+    value: "Buildings(Rep/Con)",
+    title: "Loan Purpose",
+    firstRow: false,
+    // isCorrect: true,
+    // AccountNumber: "t-12356",
+    // name: "Jhone Doe",
+    // Designation: "Consultant",
+    // Phone: "8801936548215",
+  },
+];

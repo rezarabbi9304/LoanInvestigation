@@ -1,0 +1,71 @@
+* {
+  scroll-behavior: smooth;
+  scrollbar-color: #242269 #c2d2e4;
+  scrollbar-width: 6px;
+}
+
+/* / Chrome, Edge, and Safari / */
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme-primary);
+  border-radius: 1px;
+  border: 1px solid var(--theme-primary);
+  
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --theme-background: #ebf1f3;
+      --theme-backgroundVariant: #fdfeff;
+      --theme-on-background: #474747;
+      --theme-on-backgroundVariant: #303030;
+      --theme-primary: #1B2428;
+      --theme-primaryVariant: #009879;
+      --theme-on-primary: #e2e2e2;
+      --theme-on-primaryVariant: #e9e9e9;
+      --theme-secondary: #fdfeff;
+      --theme-on-secondary: #474747;
+      --theme-secondary-variant: #303030;
+      --theme-surface: #C9D8CA;
+      --theme-surfaceFocus: #ffffff;
+      --theme-on-surface: #009879;
+      --theme-on-surfaceVariant: #303030;
+      --theme-error: #be2c00;
+      --theme-on-error: #ffffff;
+      --theme-success: #02692a;
+      --theme-on-success: #ffffff;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+
